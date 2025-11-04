@@ -5,6 +5,8 @@ import TransaccionesScreem from './PantallaGestionTransacciones';
 import PantallaRegistro from "./PantallaRegistro";
 import PantallaPresupuesto from "./PresupuestosScreen";
 import LoginScreen from "./LoginScreen";
+import GraficasScreen09 from "./GraficasScreen09";
+
 
 export default function PantallaPrincipal(){
     
@@ -49,6 +51,8 @@ export default function PantallaPrincipal(){
             return<TransaccionesScreem></TransaccionesScreem>
         case 'presupuestos':
             return<PantallaPresupuesto></PantallaPresupuesto>
+        case 'graficas':
+            return<GraficasScreen09></GraficasScreen09>
         case 'menu':
             default:
                 return(
@@ -94,7 +98,7 @@ export default function PantallaPrincipal(){
                 
                             <TouchableOpacity style={styles.boton}>
                                 {/*<Ionicons>*/}
-                                <Text style={styles.botonText}>Ver Graficas</Text>
+                                <Button title='Ver Graficas' onPress={()=>setScreen('graficas')}></Button>
                             </TouchableOpacity>
                 
                             <TouchableOpacity style={styles.boton}>
